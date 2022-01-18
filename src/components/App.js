@@ -1,6 +1,13 @@
 import React, { useReducer } from 'react';
 import reducer, { initialState } from './../reducers';
-import { applyNumber, changeOperation, clearDisplay, memoryPlus, memoryR, memoryC } from '../actions';
+import { 
+  applyNumber, 
+  changeOperation, 
+  clearDisplay, 
+  memoryPlus, 
+  memoryR, 
+  memoryC 
+} from '../actions';
 
 import './App.css';
 
@@ -12,7 +19,6 @@ import CalcButton from './CalcButton';
 function App() {
   
   const [state, dispatch]= useReducer(reducer, initialState);
-  console.log(state);
 
   const handleNumberClick = (number)=>{
     dispatch(applyNumber(number));
